@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Digital | Transmisiones Automáticas Refagas</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        refagas: {
+                            dark: '#0a0f12',
+                            panel: '#151f26',
+                            border: '#1f2d38',
+                            cyan: '#38bdf8', // Color acento principal basado en la imagen
+                            teal: '#2dd4bf'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #05080a;
+            background-image: 
+                radial-gradient(circle at 50% 0%, #112530 0%, transparent 50%),
+                radial-gradient(circle at 50% 100%, #0d1e28 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+        
+        .tech-border {
+            border: 1px solid #1f2d38;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-border:hover {
+            border-color: #38bdf8;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Simulación del borde con esquinas recortadas de la imagen original */
+        .cyber-box {
+            position: relative;
+            background: linear-gradient(135deg, rgba(21,31,38,0.9) 0%, rgba(10,15,18,0.95) 100%);
+            border-top: 2px solid #38bdf8;
+            border-bottom: 2px solid #38bdf8;
+        }
+        .cyber-box::before, .cyber-box::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: calc(100% - 16px);
+            background-color: #38bdf8;
+            top: 8px;
+        }
+        .cyber-box::before { left: 0; }
+        .cyber-box::after { right: 0; }
+        
+        /* Ocultar barra de scroll para una vista más limpia de app */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; 
+        }
+    </style>
+</head>
+<body class="text-gray-300 antialiased min-h-screen flex justify-center pb-10 pt-4 px-4 sm:pt-10">
+
+    <main class="w-full max-w-md bg-refagas-dark rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] relative border border-refagas-border">
+        
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-refagas-cyan/10 to-transparent pointer-events-none"></div>
+
+        <header class="pt-10 pb-6 px-6 text-center relative z-10">
+            <img src="https://gemini.google.com/f147bad7-dcfd-45c2-9c0a-9a76ab3e9496" alt="Logo Transmisiones Automáticas Refagas" class="w-full max-w-[280px] mx-auto drop-shadow-[0_0_20px_rgba(56,189,248,0.3)]">
+            <h1 class="sr-only">Transmisiones Automáticas Refagas</h1>
+        </header>
+
+        <div class="w-full h-48 relative border-y border-refagas-border">
+            <!-- Usando una imagen genérica de un auto de lujo como placeholder (similar al Audi del flyer) -->
+            <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Auto Moderno" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-t from-refagas-dark to-transparent"></div>
+        </div>
+
+        <section class="px-6 py-6 text-center relative z-10 -mt-10">
+            <p class="font-heading text-sm md:text-base text-gray-200 leading-relaxed font-semibold">
+                EN <span class="text-refagas-cyan">TRANSMISIONES AUTOMÁTICAS REFAGAS</span> SOMOS ESPECIALISTAS EN EL MANTENIMIENTO <span class="text-refagas-cyan">PREVENTIVO</span> Y <span class="text-refagas-cyan">CORRECTIVO</span> PARA SU <span class="text-refagas-cyan">TRANSMISIÓN AUTOMÁTICAS</span> Y SU SISTEMA DE <span class="text-refagas-cyan">DIRECCIÓN HIDRÁULICA</span>
+            </p>
+            <p class="text-xs text-gray-400 mt-3">
+                YA QUE ES CRÍTICO PARA EL RENDIMIENTO DE SU VEHÍCULO, LLEVAMOS A CABO EL MANTENIMIENTO EN TIEMPO Y FORMA CON LA MAYOR PRECISIÓN.
+            </p>
+        </section>
+
+        <section class="px-6 py-4 grid grid-cols-4 gap-3">
+            <a href="tel:2224369365" class="flex flex-col items-center justify-center p-3 rounded-xl bg-refagas-panel tech-border hover:bg-refagas-cyan/10 group">
+                <div class="w-10 h-10 rounded-full bg-refagas-cyan/20 flex items-center justify-center text-refagas-cyan group-hover:bg-refagas-cyan group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-phone text-lg"></i>
+                </div>
+                <span class="text-[10px] mt-2 font-medium uppercase tracking-wider text-gray-400 group-hover:text-white">Llamar</span>
+            </a>
+            
+            <a href="https://wa.me/522224369365" target="_blank" class="flex flex-col items-center justify-center p-3 rounded-xl bg-refagas-panel tech-border hover:bg-green-500/10 group">
+                <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                </div>
+                <span class="text-[10px] mt-2 font-medium uppercase tracking-wider text-gray-400 group-hover:text-white">WhatsApp</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100040597856198" target="_blank" class="flex flex-col items-center justify-center p-3 rounded-xl bg-refagas-panel tech-border hover:bg-blue-500/10 group">
+                <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i class="fa-brands fa-facebook-f text-lg"></i>
+                </div>
+                <span class="text-[10px] mt-2 font-medium uppercase tracking-wider text-gray-400 group-hover:text-white">Facebook</span>
+            </a>
+            <a href="https://maps.app.goo.gl/wA5sSdjRB5t4AM4g9" target="_blank" class="flex flex-col items-center justify-center p-3 rounded-xl bg-refagas-panel tech-border hover:bg-red-500/10 group">
+                <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 group-hover:bg-red-500 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-location-dot text-lg"></i>
+                </div>
+                <span class="text-[10px] mt-2 font-medium uppercase tracking-wider text-gray-400 group-hover:text-white">Ubicaciíon</span>
+            </a>
+
+        </section>
+
+        <section class="px-6 py-2">
+            <div class="flex items-center justify-center gap-3 mb-5 mt-2">
+                <div class="h-px bg-gradient-to-r from-transparent to-refagas-cyan/50 flex-1"></div>
+                <h2 class="text-center font-heading font-bold text-xs tracking-[0.2em] uppercase text-refagas-cyan">Especialidades</h2>
+                <div class="h-px bg-gradient-to-l from-transparent to-refagas-cyan/50 flex-1"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-3">
+                <div class="bg-refagas-panel border border-refagas-border p-3 rounded-xl flex items-center gap-4 tech-border group">
+                    <div class="w-11 h-11 rounded-full bg-refagas-dark border border-refagas-border flex items-center justify-center text-refagas-cyan shadow-[0_0_10px_rgba(56,189,248,0.1)] group-hover:bg-refagas-cyan group-hover:text-gray-900 transition-all duration-300 shrink-0">
+                        <i class="fa-solid fa-gears text-lg"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-gray-200 text-xs leading-snug pr-2">REPARACIÓN Y SERVICIO DE TRANSMISIONES AUTOMÁTICAS</h3>
+                </div>
+                
+                <div class="bg-refagas-panel border border-refagas-border p-3 rounded-xl flex items-center gap-4 tech-border group">
+                    <div class="w-11 h-11 rounded-full bg-refagas-dark border border-refagas-border flex items-center justify-center text-refagas-cyan shadow-[0_0_10px_rgba(56,189,248,0.1)] group-hover:bg-refagas-cyan group-hover:text-gray-900 transition-all duration-300 shrink-0">
+                        <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-gray-200 text-xs leading-snug pr-2">REPARACIÓN Y SERVICIO DE DIRECCIONES HIDRÁULICAS</h3>
+                </div>
+                
+                <div class="bg-refagas-panel border border-refagas-border p-3 rounded-xl flex items-center gap-4 tech-border group">
+                    <div class="w-11 h-11 rounded-full bg-refagas-dark border border-refagas-border flex items-center justify-center text-refagas-cyan shadow-[0_0_10px_rgba(56,189,248,0.1)] group-hover:bg-refagas-cyan group-hover:text-gray-900 transition-all duration-300 shrink-0">
+                        <i class="fa-solid fa-fan text-lg"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-gray-200 text-xs leading-snug pr-2">VENTA DE TURBINAS</h3>
+                </div>
+                
+                <div class="bg-refagas-panel border border-refagas-border p-3 rounded-xl flex items-center gap-4 tech-border group">
+                    <div class="w-11 h-11 rounded-full bg-refagas-dark border border-refagas-border flex items-center justify-center text-refagas-cyan shadow-[0_0_10px_rgba(56,189,248,0.1)] group-hover:bg-refagas-cyan group-hover:text-gray-900 transition-all duration-300 shrink-0">
+                        <i class="fa-solid fa-microchip text-lg"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-gray-200 text-xs leading-snug pr-2">PROGRAMACIÓN DE MÓDULOS</h3>
+                </div>
+            </div>
+        </section>
+        <section class="px-14 py-4 mb-6">
+            <div class="grid grid-cols-2 gap-y-7 gap-x-4">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-fill-drip text-2xl text-gray-500"></i>
+                    <span class="font-heading font-bold text-xs text-gray-200">CAMBIO DE ACEITE<br>Y FILTRO ATF</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-laptop-medical text-2xl text-gray-500"></i>
+                    <span class="font-heading font-bold text-xs text-gray-200">DIAGNÓSTICO<br>ELECTRÓNICO</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-filter text-2xl text-gray-500"></i>
+                    <span class="font-heading font-bold text-xs text-gray-200">REEMPLAZO<br>DE FILTROS</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-compact-disc text-2xl text-gray-500"></i>
+                    <span class="font-heading font-bold text-xs text-gray-200">AJUSTE DE<br>EMBRAGUES</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-refagas-panel border-t border-refagas-border p-6 flex flex-col gap-4">
+            
+            <a href="tel:222 436 9365" class="flex items-center gap-3 group">
+                <div class="w-8 h-8 rounded bg-refagas-dark flex items-center justify-center text-refagas-cyan group-hover:text-white group-hover:bg-refagas-cyan transition-colors">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                    <p class="text-[10px] text-gray-500 uppercase font-bold">Teléfono / WhatsApp</p>
+                    <p class="text-sm font-semibold text-gray-200">222 436 9365</p>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/afBin4LhQr268efR8" target="_blank" class="flex items-center gap-3 group">
+                <div class="w-8 h-8 rounded bg-refagas-dark flex items-center justify-center text-refagas-cyan group-hover:text-white group-hover:bg-refagas-cyan transition-colors">
+                    <i class="fa-solid fa-map-pin"></i>
+                </div>
+                <div>
+                    <p class="text-[10px] text-gray-500 uppercase font-bold">Ubicación</p>
+                    <p class="text-xs font-medium text-gray-300 leading-tight">
+                        Carr. Fed. Atlixco Km 8.5, Local B,<br>
+                        Tlaxcalancingo, Puebla
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100040597856198" target="_blank" class="flex items-center gap-3 group">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded bg-refagas-dark flex items-center justify-center text-refagas-cyan group-hover:text-white group-hover:bg-refagas-cyan transition-colors">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div>
+                    <p class="text-[10px] text-gray-500 uppercase font-bold">Facebook</p>
+                    <p class="text-xs font-medium text-gray-300 leading-tight">
+                        Transmisiones Automáticas<br>
+                        Y Direcciones Hidráulicas
+                    </p>
+                </div>
+            </div>
+            </a>
+            <div class="mt-4 pt-4 border-t border-refagas-border text-center">
+                <button onclick="shareCard()" class="w-full bg-refagas-cyan hover:bg-teal-400 text-gray-900 font-bold py-3 px-4 rounded-xl shadow-[0_0_15px_rgba(56,189,248,0.4)] transition-all flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-share-nodes"></i> Compartir Tarjeta
+                </button>
+            </div>
+            
+        </footer>
+    </main>
+
+    <script>
+        function shareCard() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Transmisiones Automáticas Refagas',
+                    text: 'Especialistas en mantenimiento preventivo y correctivo para su sistema de dirección hidráulica y transmisiones.',
+                    url: window.location.href,
+                })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const dummy = document.createElement('input'),
+                text = window.location.href;
+                document.body.appendChild(dummy);
+                dummy.value = text;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                
+                // Mostrar un mensaje sutil en lugar de un alert
+                const tooltip = document.createElement('div');
+                tooltip.textContent = "¡Enlace copiado al portapapeles!";
+                tooltip.className = "fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded shadow-lg z-50 text-sm";
+                document.body.appendChild(tooltip);
+                
+                setTimeout(() => {
+                    tooltip.remove();
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
